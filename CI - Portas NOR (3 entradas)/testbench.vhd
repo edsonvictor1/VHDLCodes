@@ -17,7 +17,7 @@ signal saida: bit_vector(2 downto 0);
 
 begin
 
-DUT: ci_74hc27 port map(entrada1, entrada2, saida);
+DUT: ci_74hc27 port map(entrada1, entrada2, entrada3, saida);
 
 entrada1 <= "000",
 				"101" after 10 ns,
