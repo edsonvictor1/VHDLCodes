@@ -30,6 +30,7 @@ b <=  "0111",
 		"0100" after 20 ns,
 		"1011" after 30 ns,
 		"0000" after 40 ns;
+		cin <= '0';
 
 		
 end test;
