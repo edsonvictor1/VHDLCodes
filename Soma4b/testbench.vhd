@@ -4,7 +4,7 @@ end testbench;
 architecture test of testbench is
 
 component soma4b is
-port(	a,b: in bit_vector(3 downto 0);
+port(a,b: in bit_vector(3 downto 0);
 		s: out bit_vector(3 downto 0);
 		cin: in bit;
 		cout: out bit);
