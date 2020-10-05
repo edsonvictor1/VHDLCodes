@@ -7,7 +7,7 @@ entity ci74hc595 is
 			qh:out std_logic);
 end ci74hc595;
 
-architecture ci of ci74hc595 is 
+architecture behavior of ci74hc595 is 
 
 signal serial_out:std_logic_vector(7 downto 0) := (others => '0');
 signal parallel_out:std_logic_vector(7 downto 0) := (others => '0'); 
@@ -31,4 +31,4 @@ begin
 	qh <= serial_out(0);
 	end process;
 	
-end ci;
+end behavior;
