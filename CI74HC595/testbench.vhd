@@ -15,7 +15,7 @@ architecture test of testbench is
 	signal oe,rclk,srclr,srclk,ser: std_logic;
 	signal q: std_logic_vector(7 downto 0);
     signal qh: std_logic;
-	signal data_test: std_logic_vector(15 downto 0) := "0001000000001000";--< Sentido da transmissão
+	signal data_test: std_logic_vector(0 to 15) := "0111000000001000";-- sentido da transmissão
 begin
 
 	dut: ci74hc595 port map (oe,rclk,srclr,srclk,ser,q,qh);
@@ -23,20 +23,20 @@ begin
 	process 
 	begin
             
-        srclr<= '0',
+        srclr <= '0',
        			'1' after 10 ns; 
         
-		oe<= '0',
-             '1' after 105 ns;
+		oe <= '0',
+             '1' after 90 ns;
       
        
 		for i in 0 to 15 loop
-			srclk<= '0';
+			srclk <= '0';
             ser<=data_test(i);
-            rclk<='1';
+            rclk <='1';
             wait for 5 ns;
-			srclk<= '1';
-            rclk<='0';
+			srclk <= '1';
+            rclk <='0';
             wait for 5 ns;
             end loop;
         wait;
