@@ -23,7 +23,7 @@ begin
 	
 	end process;
 	
-   q(0) <= state(1);
+        q(0) <= state(1);
 	q(1) <= state(2);
 	q(2) <= state(3);
 	
